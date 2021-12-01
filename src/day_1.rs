@@ -1,4 +1,4 @@
-pub fn sonar_sweep(input: &[i32], sweep_range: usize) -> i32 {
+pub fn sonar_sweep(input: &[u32], sweep_range: usize) -> i32 {
     let mut depth_increases = 0;
 
     let mut prev_depth = input[0];

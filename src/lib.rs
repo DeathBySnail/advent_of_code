@@ -12,9 +12,9 @@ mod tests {
         let file = common::buffer_read("./input/day_1.txt");
         match file {
             Ok(input) => {
-                let int_vec: Vec<i32> = input
+                let int_vec: Vec<u32> = input
                     .lines()
-                    .map(|x| x.unwrap().parse::<i32>().unwrap())
+                    .map(|x| x.unwrap().parse::<u32>().unwrap())
                     .collect();
                 let result = day_1::sonar_sweep(&int_vec, 1);
                 assert_eq!(1527, result);
