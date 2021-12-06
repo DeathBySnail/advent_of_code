@@ -19,3 +19,19 @@ pub fn sonar_sweep(input: &[u32], sweep_range: usize) -> i32 {
 
     depth_increases
 }
+
+#[cfg(test)]
+mod tests {
+    #[test]
+    fn day_1() {
+        use super::sonar_sweep;
+        let file = include_str!("../input/day_1.txt");
+
+        let int_vec: Vec<u32> = file.lines().map(|x| x.parse::<u32>().unwrap()).collect();
+        let result = sonar_sweep(&int_vec, 1);
+        assert_eq!(1527, result);
+
+        let result_extra = sonar_sweep(&int_vec, 3);
+        assert_eq!(1575, result_extra);
+    }
+}
