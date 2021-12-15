@@ -50,7 +50,7 @@ fn step(
     pair_set: &mut HashMap<(char, char), i64>,
     char_frequencies: &mut HashMap<char, i64>,
 ) {
-    let mut operations: Vec<(char, char, i64)> = vec![];
+    let mut operations: Vec<(char, char, i64)> = Vec::with_capacity(data.pair_insertions.len() * 3);
     for ((a, b), c) in &data.pair_insertions {
         let entry = pair_set.entry((*a, *b)).or_insert(0);
         if *entry > 0 {
