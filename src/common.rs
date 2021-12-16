@@ -6,14 +6,15 @@ pub struct HeightMap {
 }
 
 impl HeightMap {
+    #[allow(dead_code)]
     pub fn position(&self, index: usize) -> (i32, i32) {
         ((index % self.width) as i32, (index / self.width) as i32)
     }
-
+    #[allow(dead_code)]
     pub fn index(&self, pos: &(i32, i32)) -> usize {
         pos.1 as usize * self.width + pos.0 as usize
     }
-
+    #[allow(dead_code)]
     pub fn neighbors(&self, index: usize, with_diagonals: bool) -> Vec<usize> {
         let pos = self.position(index);
 
