@@ -1,3 +1,6 @@
+#[macro_use]
+extern crate lazy_static;
+
 mod common;
 // mod day_1;
 // mod day_2;
@@ -15,3 +18,4 @@ mod common;
 //mod day_14;
 //mod day_15;
 //mod day_16;
+mod day_17;
