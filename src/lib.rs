@@ -1,5 +1,6 @@
 #[macro_use]
 extern crate lazy_static;
+extern crate itertools;
 
 mod common;
 // mod day_1;
@@ -19,4 +20,5 @@ mod common;
 //mod day_15;
 //mod day_16;
 //mod day_17;
-mod day_18;
+//mod day_18;
+//mod day_19;
